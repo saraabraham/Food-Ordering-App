@@ -5,7 +5,11 @@ const sum = document.querySelector('.order-summary')
 const modal = document.getElementById("modal");
 const openBtn = document.getElementById("orderComplete");
 const closeBtn = document.querySelector(".close");
-const payBtn = document.getElementById("pay")
+const stars = document.querySelectorAll("#rating .star");
+const ratingValue = document.getElementById("rating-value");
+
+
+
 
 //Function to display add button click
 function displayOrder(e) {
@@ -80,8 +84,6 @@ function renderCart() {
 }
 
 
-
-
 function renderItems(menuArray) {
     const menuItem = document.getElementById('menu_items')
     let menu = ` `
@@ -113,8 +115,6 @@ function renderItems(menuArray) {
 
 }
 
-
-
 // Show modal
 openBtn.addEventListener("click", () => {
     modal.style.display = "block";
@@ -143,9 +143,6 @@ form.addEventListener("submit", function (e) {
         return;
     }
 
-    // Payment successful
-
-
     // Close modal & reset form
     modal.style.display = "none"
     sum.style.display = "none"
@@ -153,6 +150,23 @@ form.addEventListener("submit", function (e) {
     form.reset();
     document.getElementById('order-success').hidden = false
 });
+
+stars.forEach(star => {
+    star.addEventListener("click", () => {
+        const value = star.dataset.value;
+        ratingValue.textContent = `You rated: ${value} / 5`;
+
+        // Highlight selected stars
+        stars.forEach(s => {
+            s.textContent = s.dataset.value <= value ? '★' : '☆';
+        });
+
+
+
+        // Optionally: save rating to server or localStorage
+    });
+});
+
 
 // Render all Menu items
 
