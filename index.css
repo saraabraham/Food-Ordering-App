@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+
+
+}
+
+.centered {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-family: "Smythe", system-ui;
+    font-size: xx-large;
+}
