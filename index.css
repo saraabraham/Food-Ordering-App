@@ -1,8 +1,9 @@
 body {
+    font-family: "Smythe", system-ui;
     margin: 0;
 }
 
-.container {
+.header-section {
     position: relative;
     text-align: center;
 
@@ -11,10 +12,51 @@ body {
 
 .centered {
     position: absolute;
-    top: 20%;
-    left: 20%;
+    top: 35%;
+    left: 30%;
     color: white;
     transform: translate(-50%, -50%);
     font-family: "Smythe", system-ui;
     font-size: xx-large;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    font-size: xx-large;
+    justify-content: left;
+
+}
+
+.item_img {
+    font-size: 200px;
+    padding: 5% 5% 5% 5%;
+    margin: 0%;
+}
+
+#ing {
+    color: #8B8B8B;
+}
+
+#name {
+    font-weight: lighter;
+}
+
+#price {
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+.add {
+    border-radius: 100%;
+    padding: 1%;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: 10%;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    border: 3px solid #DEDEDE;
+
 }
