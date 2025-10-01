@@ -59,12 +59,33 @@ function renderCart() {
         `
     }
 
+    //Apply 10% discount if total>50$
+    let discount = 0
+    if (totalPrice > 50) {
+        discount = 0.10 * totalPrice
+    }
+
+    const finalPrice = totalPrice - discount
+
+
     orderSumm.innerHTML += `<hr style="border: 2px solid black;margin-top:2%;" />
         <div class="order-total">
         <div class="order-left"> Total Price: </div>
          <div class="order-right"> $${totalPrice}</div>
         </div>
 `
+    if (discount > 0) {
+        orderSumm.innerHTML += `
+        <div class="order-total">
+            <div class="order-left">Discount (10%): </div>
+            <div class="order-right">-$${discount.toFixed(2)}</div>
+        </div>
+        <div class="order-total">
+            <div class="order-left">Final Price: </div>
+            <div class="order-right">$${finalPrice.toFixed(2)}</div>
+        </div>
+        `
+    }
 
     const removeButtons = document.querySelectorAll('.remove-btn');
     removeButtons.forEach(btn => {
