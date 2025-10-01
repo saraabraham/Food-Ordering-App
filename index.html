@@ -1,26 +1,59 @@
 <html>
 
 <head>
+
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <script src="index.js" type="module"></script>
 
-    <div class="header-section">
-        <img src="images/header.jpg" alt="Burger Shop" style="width:100%;height: 350px;">
-        <div class="centered">
-            <h1>Jimmy's Diner</h1>
-            <h2>The best burgers and pizzas in town.</h2>
+    <main>
+        <!-- Header Section -->
+        <div class="header-section">
+            <img src="images/header.jpg" alt="Burger Shop" style="width:100%;height: 350px;">
+            <div class="centered">
+                <h1>Jimmy's Diner</h1>
+                <h2>The best burgers and pizzas in town.</h2>
+            </div>
+        </div>
+        <!-- Menu Section -->
+        <div class="menu-section">
+            <div class="menu_items" id="menu_items"></div>
+        </div>
+
+        <!-- Order Summary Section -->
+        <div class="order-summary" hidden="true">
+            <h1 id="order">Your Order</h1>
+            <div class="orders" id="orders"></div>
+            <br>
+            <br>
+        </div>
+        <button class="order-complete" id="orderComplete" hidden="true">Complete order</button>
+    </main>
+
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Enter card details</h2>
+            <form id="pay-form">
+                <input class="t1" type="text" placeholder="Enter your name" name="name" required>
+                <input class="t1" type="number" placeholder="Enter card number" name="card number" required>
+                <input class="t1" type="number" placeholder="Enter CVV" name="CVV" required>
+                <button class="pay" type="submit" id="pay">Pay</button>
+            </form>
         </div>
     </div>
-    <div class="menu-section">
-        <div class="menu_items" id="menu_items"></div>
 
-
+    <!-- Order Confirmation -->
+    <div class="order-confirmation" id="order-success" hidden="true">
+        <p>Thanks! Your Order is on the way!</p>
     </div>
 
 </body>
