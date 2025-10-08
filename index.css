@@ -1,41 +1,47 @@
 body {
     font-family: "Smythe", system-ui;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* ----- Header Section ----- */
 .header-section {
     position: relative;
     text-align: center;
-
-
+    width: 100%;
 }
 
 .centered {
     position: absolute;
     top: 35%;
-    left: 30%;
+    left: 50%;
     color: white;
     transform: translate(-50%, -50%);
-    font-family: "Smythe", system-ui;
-    font-size: xx-large;
+    font-size: 2rem;
+    text-align: center;
 }
 
+/* ----- Menu Items ----- */
 .item {
     display: flex;
     align-items: center;
-    font-size: xx-large;
-    justify-content: left;
-
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-left: 50px;
 }
 
 .item_img {
-    font-size: 200px;
-    padding: 5% 5% 5% 5%;
-    margin: 0%;
+    width: 120px;
+    height: auto;
+    padding: 1rem;
 }
 
 #ing {
-    color: #8B8B8B;
+    color: #8b8b8b;
 }
 
 #name {
@@ -44,52 +50,47 @@ body {
 
 #price {
     font-weight: lighter;
-    font-size: 40px;
+    font-size: 1.5rem;
 }
 
+/* Add button */
 .add {
-    border-radius: 100%;
-    padding: 1%;
-    width: 100px;
-    height: 100px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     margin-left: auto;
-    margin-right: 10%;
-    font-size: 50px;
-    font-family: 'Courier New', Courier, monospace;
+    margin-right: 1rem;
+    font-size: 1.8rem;
     background-color: white;
-    border: 3px solid #DEDEDE;
-
+    border: 2px solid #dedede;
+    transition: transform 0.1s;
 }
 
 .add:active {
     transform: scale(0.95);
-
 }
 
+/* ----- Order Section ----- */
 #order {
-    font-size: 50px;
+    font-size: 2rem;
     font-weight: lighter;
     text-align: center;
-    margin-top: 5%;
-
+    margin-top: 2rem;
 }
 
-.order-things {
-    font-size: 50px;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: row;
-    font-weight: lighter;
-}
-
+.order-things,
 .order-total {
-    font-size: 50px;
-    justify-content: space-between;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
     font-weight: lighter;
-    margin-top: 3%;
+    margin: 1rem 5%;
+}
 
+hr {
+    width: 90%;
+    margin: 1rem auto;
 }
 
 .order-left {
@@ -100,107 +101,90 @@ body {
     margin-right: 5%;
 }
 
-
 .remove-btn {
     background-color: white;
     border: none;
-    color: #BBBBBB;
-    font-size: 25px;
-
+    color: #bbbbbb;
+    font-size: 1rem;
 }
 
-hr {
-    width: 90%;
-}
-
+/* ----- Total & Confirmation ----- */
 #totprice {
-    font-size: 40px;
+    font-size: 1.5rem;
     margin-left: 5%;
     font-weight: lighter;
-
 }
 
 .order-complete {
-    background-color: #16DB99;
+    background-color: #16db99;
     border: none;
-    padding: 3% 2% 3% 2%;
     width: 90%;
-    align-content: center;
-    margin-left: 5%;
-    margin-bottom: 10%;
-    font-size: x-large;
-    margin-top: 2%;
+    margin: 1rem 5%;
+    padding: 1rem;
+    font-size: 1.3rem;
     color: white;
     font-weight: bold;
-    font-size: 30px;
+    border-radius: 8px;
+    transition: transform 0.1s;
 }
 
 .order-complete:active {
     transform: scale(0.95);
 }
 
-/* Modal hidden by default */
+/* ----- Modal ----- */
 .modal {
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0, 0, 0, 0.6);
-    /* dark overlay */
 }
 
-/* Modal box */
 .modal-content {
     background: white;
     margin: 10% auto;
-    padding: 20px;
-    width: 400px;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 400px;
     border-radius: 12px;
     text-align: center;
-    position: relative;
     display: flex;
     flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Close button (x) */
 .close {
     position: absolute;
     top: 10px;
     right: 20px;
-    font-size: 30px;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
 #pay-form {
     display: flex;
     flex-direction: column;
-
 }
 
 .t1 {
-    margin-top: 5%;
-    padding: 3%;
-    font-size: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
     color: #757575;
-    font-style: normal;
     border: 1px solid #757575;
-
 }
 
 .pay {
-    background-color: #16DB99;
+    background-color: #16db99;
     border: none;
-    padding: 3% 2% 3% 2%;
-    margin-top: 5%;
+    padding: 0.8rem;
+    margin-top: 1rem;
     color: white;
     font-weight: bold;
-    font-size: 20px;
-
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: transform 0.1s;
 }
 
 .pay:active {
@@ -208,13 +192,76 @@ hr {
 }
 
 .order-confirmation {
-    background-color: #ECFDF5;
-    color: #065F46;
-    padding: 2%;
-    margin-left: 5%;
-    margin-right: 5%;
+    background-color: #ecfdf5;
+    color: #065f46;
+    padding: 1rem;
+    margin: 1rem 5%;
     text-align: center;
-    font-size: 50px;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    font-size: 1.8rem;
+    border-radius: 8px;
+}
+
+/* ----- RESPONSIVE BREAKPOINTS ----- */
+@media (max-width: 768px) {
+    .centered {
+        font-size: 1.5rem;
+        top: 40%;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item_img {
+        width: 80px;
+        padding: 0.5rem;
+    }
+
+    .add {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    #price {
+        font-size: 1.2rem;
+    }
+
+    #order {
+        font-size: 1.5rem;
+    }
+
+    .order-things,
+    .order-total {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .order-complete {
+        font-size: 1.5rem;
+    }
+
+    .order-confirmation {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .centered {
+        font-size: 1.2rem;
+    }
+
+    .add {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 30% auto;
+    }
 }
