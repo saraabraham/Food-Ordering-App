@@ -1,19 +1,32 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# 🍔 Food Ordering App
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+A simple and responsive **Food Ordering Web App** that lets users browse a menu, add items to their cart, and simulate placing an order — all in a clean and intuitive interface.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+---
 
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+## 🚀 Features
 
-Happy Coding!
+- 🧾 **Interactive Menu** — Browse and select food items with images, names, and prices.  
+- ➕ **Add to Cart** — Easily add or remove items from your order.  
+- 💳 **Checkout Modal** — Simple checkout form for payment simulation.  
+- 📱 **Mobile Responsive** — Optimized for all devices (desktop, tablet, and mobile).  
+- 🎨 **Minimal UI Design** — Clean typography and layout using the *Smythe* font for a modern diner vibe.  
+
+---
+
+## 🧩 Tech Stack
+
+| Technology | Purpose |
+|-------------|----------|
+| **HTML5** | Structure and markup |
+| **CSS3** | Styling, layout, and responsiveness |
+| **JavaScript (ES6)** | Dynamic behavior and DOM manipulation |
+| **Google Fonts (Smythe)** | Custom typography |
+
+---
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/saraabraham/Food-Ordering-App.git
